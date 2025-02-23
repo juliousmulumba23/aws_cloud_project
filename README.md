@@ -1,4 +1,4 @@
-# AWS Lambda EC2 Management
+# AWS Lambda automated EC2 Management
 
 This project contains an AWS Lambda function that creates a Linux EC2 instance and terminates it after 20 minutes. The Lambda function is triggered via an HTTP API created using API Gateway. The project includes a CloudFormation template to set up the necessary resources.
 
