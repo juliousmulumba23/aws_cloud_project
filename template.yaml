@@ -37,7 +37,7 @@ Resources:
       Role: !GetAtt LambdaExecutionRole.Arn
       Code:
         S3Bucket: linuxjue
-        S3Key: s3://linuxjue/lambda_code.zip
+        S3Key: lambda_code.zip
       Runtime: 'python3.8'
       Timeout: 900
 
