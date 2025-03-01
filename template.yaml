@@ -30,6 +30,7 @@ Resources:
               - Effect: 'Allow'
                 Action: 'lambda:InvokeFunction'
                 Resource: '*'
+
   LambdaFunction:
     Type: 'AWS::Lambda::Function'
     Properties:
@@ -38,6 +39,18 @@ Resources:
       Code:
         S3Bucket: linuxjue
         S3Key: lambda_code.zip
+      Runtime: 'python3.8'
+      Timeout: 900
+
+  LambdaFunction2:
+    Type: 'AWS::Lambda::Function'
+    Properties:
+      FunctionName: 'terminate_lambda_function'
+      Handler: 'lambda_function.terminate_handler'
+      Role: !GetAtt LambdaExecutionRole.Arn
+      Code:
+        S3Bucket: linuxjue
+        S3Key: terminate_instance.zip
       Runtime: 'python3.8'
       Timeout: 900
 
