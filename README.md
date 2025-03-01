@@ -11,14 +11,15 @@ This project contains an AWS Lambda function that creates a Linux EC2 instance a
 ## Architecture
 
 1. **Lambda Function**: Creates an EC2 instance and schedules its termination.
-2. **API Gateway**: Provides an HTTP endpoint to trigger the Lambda function.
-3. **CloudFormation Template**: Sets up the Lambda function, API Gateway, and necessary IAM roles.
+2. **Lambda Function2**: This one is invoked to delete the ec2 instance after 10 minutes.
+3. **API Gateway**: Provides an HTTP endpoint to trigger the Lambda function.
+4. **CloudFormation Template**: Sets up the Lambda function, API Gateway, and necessary IAM roles.
 
 ## Prerequisites
 
 - AWS Account
 - AWS CLI configured with appropriate permissions
-- S3 bucket to store the Lambda function code
+- S3 bucket to store the Lambda function code i.e. (lambda_code.zip and terminate_instance.zip)
 
 ## Setup
 
